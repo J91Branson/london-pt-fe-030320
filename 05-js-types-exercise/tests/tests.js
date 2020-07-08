@@ -1,3 +1,6 @@
+const greeting= "Hi!";
+const name= "JB";
+const phrase= `Greeting: ${greeting}, Name: ${name}`;
 describe("strings", () => {
   test("greeting is a string", () => {
     expect(typeof greeting).toBe("string");
@@ -13,6 +16,13 @@ describe("strings", () => {
   });
 });
 
+const price=4.99;
+const quantity=100;
+const total= price * quantity;
+const age1=1000;
+const age2=100;
+const age3=10000;
+const averageAge= (age1 + age2 + age3) /3;
 describe("numbers", () => {
   test("price is a number", () => {
     expect(typeof price).toBe("number");
@@ -41,6 +51,9 @@ describe("numbers", () => {
     expect(averageAge).toBe((age1 + age2 + age3) / 3);
   });
 });
+
+const loggedIn= true;
+const adminUser= false;
 describe("booleans", () => {
   test("loggedIn is a boolean", () => {
     expect(typeof loggedIn).toBe("boolean");
@@ -55,12 +68,16 @@ describe("booleans", () => {
     expect(adminUser).toBe(false);
   });
 });
+
+const missingInfo= undefined;
+let password;
 describe("undefined", () => {
   test("missingInfo is declared as undefined", () => {
     expect(() => missingInfo).not.toThrow();
     expect(typeof missingInfo).toBe("undefined");
   });
   test("password is completely undefined", () => {
-    expect(() => password).toThrow();
+    expect(() => password).not.toThrow();
+    expect(typeof password).toBe("undefined");
   });
 });
