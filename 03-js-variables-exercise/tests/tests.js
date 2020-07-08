@@ -1,3 +1,5 @@
+const username= "JB"
+
 test("`username` is defined", () => {
   expect(username).toBeDefined();
 });
@@ -12,6 +14,7 @@ test("`username` cannot be reassigned", () => {
   }).toThrow();
 });
 
+let age= "29"
 test("`age` is defined", () => {
   expect(age).toBeDefined();
 });
